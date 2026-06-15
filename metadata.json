@@ -1,0 +1,14 @@
+{
+  "name": "Window Menu Keybinds",
+  "description": "Add keyboard shortcuts to the window menu. Press T for Always on Top, C for Close, and more.",
+  "uuid": "window-menu-keybinds@sugarycandybar.github.io",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
+  ],
+  "url": "https://github.com/sugarycandybar/window-menu-keybinds"
+}
