@@ -42,7 +42,21 @@ export default class WindowMenuKeybinds extends Extension {
 
                 item[SHORTCUT_KEY] = key.charCodeAt(0);
 
-                const idx = text.toLowerCase().indexOf(key);
+                let idx = text.toLowerCase().indexOf(key);
+                const words = text.split(' ');
+                if (words.length > 1) {
+                    for (let w = words.length - 1; w >= 0; w--) {
+                        const wordLower = words[w].toLowerCase();
+                        const wordIdx = wordLower.indexOf(key);
+                        if (wordIdx !== -1) {
+                            let absPos = 0;
+                            for (let i = 0; i < w; i++)
+                                absPos += words[i].length + 1;
+                            idx = absPos + wordIdx;
+                            break;
+                        }
+                    }
+                }
                 if (idx !== -1) {
                     const markupText = `${text.slice(0, idx)}<u>${text[idx]}</u>${text.slice(idx + 1)}`;
                     label.clutter_text.set_markup(markupText);
