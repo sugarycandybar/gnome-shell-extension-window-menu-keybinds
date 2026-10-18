@@ -32,7 +32,7 @@ Visit [extensions.gnome.org](https://extensions.gnome.org) and enable the extens
 ### From source
 
 ```sh
-git clone https://github.com/sugarycandybar/window-menu-keybinds.git \
+git clone https://github.com/sugarycandybar/gnome-shell-extension-window-menu-keybinds.git \
   ~/.local/share/gnome-shell/extensions/window-menu-keybinds@sugarycandybar.github.io
 ```
 
@@ -44,7 +44,7 @@ gnome-extensions enable window-menu-keybinds@sugarycandybar.github.io
 
 ## Compatibility
 
-- GNOME Shell 45 – 50
+- GNOME Shell 45 – 51
 
 ## License
 
